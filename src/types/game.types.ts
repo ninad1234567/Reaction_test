@@ -1,11 +1,13 @@
 // Core game state management
-export const enum GameState {
-  IDLE = 'IDLE',
-  ACTIVE = 'ACTIVE',
-  PAUSED = 'PAUSED',
-  GAME_OVER = 'GAME_OVER',
-  RESULTS = 'RESULTS'
-}
+export const GameState = {
+  IDLE: 'IDLE',
+  ACTIVE: 'ACTIVE',
+  PAUSED: 'PAUSED',
+  GAME_OVER: 'GAME_OVER',
+  RESULTS: 'RESULTS'
+} as const;
+
+export type GameState = typeof GameState[keyof typeof GameState];
 
 // Performance tier classification
 export type PerformanceTier = 'S' | 'A' | 'B' | 'C' | 'D';
