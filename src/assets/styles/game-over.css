@@ -1,0 +1,163 @@
+/* Game Over Screen Overlay */
+.game-over-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    animation: fadeIn 0.5s ease;
+    overflow-y: auto;
+}
+
+.game-over-content {
+    text-align: center;
+    max-width: 800px;
+    padding: 40px;
+}
+
+.game-over-title {
+    font-size: 64px;
+    font-weight: 700;
+    color: #00FFFF;
+    margin-bottom: 40px;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.score-card {
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #00FFFF;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+.tier-badge {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-shadow: 0 0 15px currentColor;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #999999;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-value {
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.restart-button {
+    background: #00FFFF;
+    color: #000000;
+    border: none;
+    padding: 18px 50px;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Monaco', 'Courier New', monospace;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+.restart-button:hover {
+    background: #00CCCC;
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+}
+
+.restart-button:active {
+    transform: scale(0.98);
+}
+
+.restart-button:focus {
+    outline: 3px solid #FFFFFF;
+    outline-offset: 4px;
+}
+
+.home-button {
+    background: transparent;
+    color: #00FFFF;
+    border: 2px solid #00FFFF;
+    padding: 18px 50px;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Monaco', 'Courier New', monospace;
+}
+
+.home-button:hover {
+    background: rgba(0, 255, 255, 0.1);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.home-button:active {
+    transform: scale(0.98);
+}
+
+.game-hint {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .game-over-title {
+        font-size: 36px;
+    }
+
+    .tier-badge {
+        font-size: 32px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .stat-value {
+        font-size: 28px;
+    }
+
+    .restart-button,
+    .home-button {
+        padding: 15px 35px;
+        font-size: 18px;
+    }
+}

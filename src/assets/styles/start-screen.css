@@ -1,0 +1,193 @@
+.start-screen-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(0, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.95) 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    cursor: pointer;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.start-screen-content {
+    text-align: center;
+    padding: 60px 40px;
+    background: rgba(10, 10, 10, 0.8);
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 60px rgba(0, 255, 255, 0.2), inset 0 0 40px rgba(0, 255, 255, 0.05);
+    animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.title-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.game-title {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 72px;
+    font-weight: 900;
+    color: #00FFFF;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    margin: 0;
+    text-shadow:
+        0 0 20px rgba(0, 255, 255, 0.8),
+        0 0 40px rgba(0, 255, 255, 0.6),
+        0 0 60px rgba(0, 255, 255, 0.4),
+        0 0 80px rgba(0, 255, 255, 0.2);
+    animation: titleGlow 3s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+
+    0%,
+    100% {
+        text-shadow:
+            0 0 20px rgba(0, 255, 255, 0.8),
+            0 0 40px rgba(0, 255, 255, 0.6),
+            0 0 60px rgba(0, 255, 255, 0.4);
+    }
+
+    50% {
+        text-shadow:
+            0 0 30px rgba(0, 255, 255, 1),
+            0 0 60px rgba(0, 255, 255, 0.8),
+            0 0 90px rgba(0, 255, 255, 0.6);
+    }
+}
+
+.title-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, transparent 70%);
+    filter: blur(40px);
+    animation: pulse 2s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+.game-subtitle {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 6px;
+    margin: 10px 0 30px 0;
+    text-transform: uppercase;
+}
+
+.game-instructions {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 20px 0 10px 0;
+    line-height: 1.6;
+}
+
+.game-instructions-sub {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 13px;
+    color: rgba(0, 255, 255, 0.7);
+    margin: 5px 0 35px 0;
+    line-height: 1.6;
+}
+
+.start-button {
+    position: relative;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    padding: 18px 50px;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.2) 0%, rgba(0, 200, 200, 0.3) 100%);
+    color: #00FFFF;
+    border: 3px solid #00FFFF;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+}
+
+.button-text {
+    position: relative;
+    z-index: 2;
+}
+
+.button-glow {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.start-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.3) 0%, rgba(0, 220, 220, 0.4) 100%);
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.7), 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.start-button:hover .button-glow {
+    left: 100%;
+}
+
+.start-button:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+.game-hint {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 25px;
+    font-style: italic;
+}

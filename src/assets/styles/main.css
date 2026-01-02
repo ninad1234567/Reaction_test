@@ -1,0 +1,62 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Monaco', 'Courier New', monospace;
+  background: linear-gradient(to bottom, #0f0f0f 0%, #2a2a2a 100%);
+  color: #ffffff;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-canvas-container {
+  position: relative;
+  max-width: 1280px;
+  max-height: 720px;
+  width: 100%;
+  height: 100%;
+}
+
+.game-canvas-container canvas {
+  border-radius: 0px;
+  box-shadow: 0 0 50px rgba(0, 255, 255, 0.3);
+}
+
+/* Ensure cursor is hidden on game canvas */
+canvas {
+  cursor: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .game-canvas-container {
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+}

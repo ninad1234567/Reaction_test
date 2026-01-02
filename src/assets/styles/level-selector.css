@@ -1,0 +1,67 @@
+.level-selector {
+    position: absolute;
+    top: 20px;
+    right: 180px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 15px 20px;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.level-label {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    color: #00FFFF;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.level-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.level-btn {
+    background: rgba(20, 20, 20, 0.9);
+    border: 2px solid rgba(100, 100, 100, 0.3);
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.level-btn:hover {
+    border-color: rgba(0, 255, 255, 0.5);
+    background: rgba(0, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.level-btn.active {
+    border-color: #00FFFF;
+    background: rgba(0, 255, 255, 0.2);
+    color: #00FFFF;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+.level-icon {
+    font-size: 14px;
+}
+
+.level-name {
+    letter-spacing: 1px;
+}
+
+.level-btn.active .level-name {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}

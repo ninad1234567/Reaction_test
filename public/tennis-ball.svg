@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <!-- Radial gradient for 3D effect -->
+  <defs>
+    <radialGradient id="ballGradient" cx="40%" cy="40%">
+      <stop offset="0%" style="stop-color:#FFFF66;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#C8FF00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8BB000;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Main ball circle -->
+  <circle cx="18" cy="18" r="17" fill="url(#ballGradient)" />
+  
+  <!-- Tennis ball seams (darker yellow curved lines) -->
+  <path d="M 10,18 A 8,8 0 0,1 10,18" stroke="#6B7D00" stroke-width="1.5" fill="none"
+        d="M 8,18 Q 10,12 12,18 Q 10,24 8,18" />
+  <path d="M 24,18 Q 26,12 28,18 Q 26,24 24,18" stroke="#6B7D00" stroke-width="1.5" fill="none" />
+</svg>
